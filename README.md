@@ -60,7 +60,7 @@ Ky projekt përdor:
 git clone https://github.com/USERNAME/projekti-final-pipeline.git
 cd projekti-final-pipeline
 
-2) Krijo Virtual Environment
+## 2) Krijo Virtual Environment
 
 Windows
 
@@ -72,10 +72,10 @@ macOS/Linux
 python3 -m venv .venv
 source .venv/bin/activate
 
-3) Instalo libraritë
+## 3) Instalo libraritë
 pip install -r requirements.txt
 
-4) Krijo file-in .env
+## 4) Krijo file-in .env
 
 Krijo një file .env në root të projektit (ose kopjo .env.example) dhe vendos këtë format:
 
@@ -89,11 +89,11 @@ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().d
 
 Kopjo key-n dhe vendose te .env.
 
-5) Ekzekuto projektin
+## 5) Ekzekuto projektin
 
 python -m src.main
 
-6) Ku dalin rezultatet?
+## 6) Ku dalin rezultatet?
 
 Pas ekzekutimit krijohen këto file:
 
