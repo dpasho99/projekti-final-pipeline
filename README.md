@@ -50,58 +50,13 @@ Ky projekt përdor:
 - **SHA-256 hashing** për të ruajtur një identifikues të sigurt të linkut
 
 Çelësi i encryption ruhet në `.env` dhe nuk publikohet në GitHub.
-
 ---
 
 # Si ekzekutohet projekti (Hap pas Hapi)
 
 ## 1) Shkarko projektin nga GitHub
+Hap terminalin dhe shkruaj:
+
 ```bash
 git clone https://github.com/USERNAME/projekti-final-pipeline.git
 cd projekti-final-pipeline
-
-## 2) Krijo Virtual Environment
-
-Windows
-
-py -m venv .venv
-.venv\Scripts\activate
-
-macOS/Linux
-
-python3 -m venv .venv
-source .venv/bin/activate
-
-## 3) Instalo libraritë
-pip install -r requirements.txt
-
-## 4) Krijo file-in .env
-
-Krijo një file .env në root të projektit (ose kopjo .env.example) dhe vendos këtë format:
-
-FERNET_KEY=PASTE_YOUR_KEY_HERE
-HTTP_TIMEOUT=15
-USER_AGENT=Mozilla/5.0 (Windows NT 10.0; Win64; x64) ProjektiFinal/1.0
-
-Si gjenerohet FERNET_KEY
-
-python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
-
-Kopjo key-n dhe vendose te .env.
-
-## 5) Ekzekuto projektin
-
-python -m src.main
-
-## 6) Ku dalin rezultatet?
-
-Pas ekzekutimit krijohen këto file:
-
-data/processed/books_enriched.csv
-
-data/processed/metrics.csv
-
-data/processed/books.sqlite
-
-Folderi data/ nuk ngarkohet në GitHub sepse është në .gitignore.
-
