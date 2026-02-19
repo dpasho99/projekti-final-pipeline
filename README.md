@@ -37,30 +37,6 @@ Të dhëna shtesë:
 
 ---
 
-## Struktura e projektit
-
-projekti-final-pipeline/
-│
-├── src/
-│   ├── main.py
-│   ├── scraping/scraper.py
-│   ├── api/client.py
-│   ├── processing/transform.py
-│   ├── security/crypto.py
-│   ├── storage/db.py
-│   └── utils/logging_config.py
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── requirements.txt
-├── .env.example
-├── .gitignore
-└── README.md
-
----
-
 ## Çfarë bën çdo modul?
 
 scraper.py  
