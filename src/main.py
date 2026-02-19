@@ -19,7 +19,7 @@ def run(pages: int = 3) -> None:
     # 1) Scraping
     raw_data = scrape_books(pages=pages)
     df = pd.DataFrame(raw_data)
-
+    log.info("Scraped %s records", len(df))
     # 2) Clean
     df = clean(df)
 
@@ -37,6 +37,7 @@ def run(pages: int = 3) -> None:
     # 5) Storage (SQLite)
     init_db()
     insert_books(df.to_dict(orient="records"))
+    log.info("Inserted %s rows into SQLite", len(df))
 
     # 6) Export processed data
     df.to_csv("data/processed/books_enriched.csv", index=False)
